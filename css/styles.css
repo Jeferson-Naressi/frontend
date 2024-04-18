@@ -1,10 +1,56 @@
 /* Para comentar aqui */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
 :root, :root[data-theme='dark'] {
-    --primary-color: #F0F0F0;
-    --primary-bg-color:#000;
+    --primary-color: #F0F0F0; /*Cor do texto */
+    --secundary-bg-color: #d82424; /*Segunda cor */
+    --primary-bg-color:#111217; /*Cor do fundo bg: BACKGROUND= Plano de fundo*/
+    --secundary-bg-color: ##F0F0F0; /*Segunda cor */
+    --primary-border-color:#F0F0F0; /* Cor para borda*/
+    --secundary-border-color:#F0F0F0;  /*Segunda cor */
+
+    --title-color:#f0f0f0; /*Cor do titulo*/
+    --text-color: #F0F0F0; /*Cor do texto*/
+    --link-color: #F0F0F0; /*Cor do link */
+    --inco-color: #F0F0F0; /*Cor do icone*/    
 }
 :root [data-theme='light'] {
     --primary-color: #0b0b0f;
     --primary-bg-color:#F0F0F0;
+    --secondary-bg-color: #F0F0F0;
+    --prymary-border-color: #F0F0F0;
+    --secundary-border-color: #F0F0F0;
+
+    --title-color:#F0F0F0;
+    --text-color:#F0F0F0;
+    --link-color:#F0F0F0;
+    --icon-color:#F0F0F0;
+} /* Definindo variavel de cores para um tema claro e um tema escuro
+
+Root refere-se ao elemento raiz do documento html
+
+seletor :root define as variaveis globais
+
+isso oferece uma maneira flexivel de definir valores que podem ser reutiilizadas em todo o seu CSS  e facilmente atualizados de um único lugar */
+
+html [data-theme='light'] .brand-logo {
+    filter:invert(1);
 }
+
+html [data-theme='light'] .tecnologias-logo {
+    filter:invert(80%);
+} /* para inversão das cores do logo quando ele estiver em modo dark tendo em vista que ele é preto */
+
+* {
+  margin: 10; /*Margem */
+  padding: 10; /*Espaçamento/ Preenchimento */
+  box-sizing: border-box; /* Box ou Caixa*/
+  vertical-align: baseline; /*Alinhamento vertical */
+  list-style: none; /*Estilo de lista */
+  scrollbar-width: thin; /*Comprimento da barra */
+  scrollbar-color: var(--secundary-bg-color) transparent;
+}
+
+body {
+    background-color: var(--primary-bg-color); /*Cor do fundo da pagina*/
+} /* */
