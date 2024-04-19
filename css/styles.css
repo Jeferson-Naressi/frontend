@@ -5,32 +5,30 @@
     --primary-color: #F0F0F0; /*Cor do texto */
     --secundary-bg-color: #d82424; /*Segunda cor */
     --primary-bg-color:#111217; /*Cor do fundo bg: BACKGROUND= Plano de fundo*/
-    --secundary-bg-color: ##F0F0F0; /*Segunda cor */
-    --primary-border-color:#F0F0F0; /* Cor para borda*/
-    --secundary-border-color:#F0F0F0;  /*Segunda cor */
+    --secundary-bg-color: #28292E; /*Segunda cor */
+    --primary-border-color:#28292E; /* Cor para borda*/
+    --secundary-border-color:#28292E;  /*Segunda cor */
 
     --title-color:#f0f0f0; /*Cor do titulo*/
-    --text-color: #F0F0F0; /*Cor do texto*/
-    --link-color: #F0F0F0; /*Cor do link */
-    --inco-color: #F0F0F0; /*Cor do icone*/    
+    --text-color: #28292E; /*Cor do texto*/
+    --link-color: #28292E; /*Cor do link */
+    --inco-color: #c7c8c9; /*Cor do icone*/    
 }
 :root [data-theme='light'] {
-    --primary-color: #0b0b0f;
-    --primary-bg-color:#F0F0F0;
-    --secondary-bg-color: #F0F0F0;
-    --prymary-border-color: #F0F0F0;
-    --secundary-border-color: #F0F0F0;
+    --primary-color: #0B0B0F;
+    --primary-bg-color:#E9E9E9;
+    --secondary-bg-color: #C7c8c9;
+    --prymary-border-color: #C7c8c9;
+    --secundary-border-color: #9a9a9c;
 
-    --title-color:#F0F0F0;
-    --text-color:#F0F0F0;
-    --link-color:#F0F0F0;
-    --icon-color:#F0F0F0;
+    --title-color: #56575a;
+    --text-color: #28292e;
+    --link-color: #28292e;
+    --icon-color:#56575a;
 } /* Definindo variavel de cores para um tema claro e um tema escuro
 
 Root refere-se ao elemento raiz do documento html
-
 seletor :root define as variaveis globais
-
 isso oferece uma maneira flexivel de definir valores que podem ser reutiilizadas em todo o seu CSS  e facilmente atualizados de um único lugar */
 
 html [data-theme='light'] .brand-logo {
@@ -70,5 +68,9 @@ body {
 .header-toggle {
     display: flex;
     justify-content: flex-end;
-    
+}
+
+.header-logo .logo{
+    width: 3.25rem;
+    height: 3.25rem;
 }
