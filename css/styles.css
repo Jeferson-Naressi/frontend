@@ -53,4 +53,22 @@ html [data-theme='light'] .tecnologias-logo {
 
 body {
     background-color: var(--primary-bg-color); /*Cor do fundo da pagina*/
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--text-color);
 } /* */
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 2;
+}
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+    
+}
