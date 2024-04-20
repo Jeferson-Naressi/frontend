@@ -12,7 +12,7 @@
     --title-color:#f0f0f0; /*Cor do titulo*/
     --text-color: #28292E; /*Cor do texto*/
     --link-color: #28292E; /*Cor do link */
-    --inco-color: #c7c8c9; /*Cor do icone*/    
+    --inco-color: #fac000; /*Cor do icone*/    
 }
 :root [data-theme='light'] {
     --primary-color: #0B0B0F;
@@ -65,12 +65,19 @@ body {
     z-index: 2;
 }
 
+.header-logo .logo{
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
 .header-toggle {
     display: flex;
     justify-content: flex-end;
 }
 
-.header-logo .logo{
-    width: 3.25rem;
-    height: 3.25rem;
+#toggletheme {
+    font-size: 1.5rem;
+    color: var(--inco-color);
+    cursor: pointer;
+    transition: ease-in-out .4s; 
 }
