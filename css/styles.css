@@ -34,11 +34,9 @@ isso oferece uma maneira flexivel de definir valores que podem ser reutiilizadas
 html [data-theme='light'] .brand-logo {
     filter:invert(1);
 }
-
 html [data-theme='light'] .tecnologias-logo {
     filter:invert(80%);
 } /* para inversão das cores do logo quando ele estiver em modo dark tendo em vista que ele é preto */
-
 * {
   margin: 10; /*Margem */
   padding: 10; /*Espaçamento/ Preenchimento */
@@ -48,13 +46,11 @@ html [data-theme='light'] .tecnologias-logo {
   scrollbar-width: thin; /*Comprimento da barra */
   scrollbar-color: var(--secundary-bg-color) transparent;
 }
-
 body {
     background-color: var(--primary-bg-color); /*Cor do fundo da pagina*/
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     color:var(--text-color);
 } /* */
-
 #header {
     display: flex;
     flex-flow: row wrap;
@@ -64,20 +60,42 @@ body {
     padding: 0.5rem 1rem;
     z-index: 2;
 }
-
 .header-logo .logo{
     width: 3.25rem;
     height: 3.25rem;
 }
-
 .header-toggle {
     display: flex;
     justify-content: flex-end;
 }
-
 #toggletheme {
     font-size: 1.5rem;
     color: var(--inco-color);
     cursor: pointer;
     transition: ease-in-out .4s; 
+}
+.menu {
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg-color);   
+}
+.menu-item {
+    width: 100%;
+}
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: .5rem; /* */
+}
+.menu-mobile {
+    width: 100vw; /*VW = viewport width Valor 100% da tela*/
+    position: fixed; /*Posição */
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border-color);
+}
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
 }
