@@ -99,3 +99,10 @@ body {
     justify-content: center;
     padding: 0.5rem 1rem;
 }
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text { color: var(--primary-color);}
+.menu-icon, .menu-text { color: var(--text-color);}
+.menu-icon {font-size: 1.5rem;}
+
