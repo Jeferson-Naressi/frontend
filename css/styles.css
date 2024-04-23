@@ -86,7 +86,6 @@ body {
     /*  Torna o elemento um flex container automaticamente
     transformando todos os seus filhos diretos em flex itens */
     align-items: center;
-    align-items: center;
     background: var(--primary-bg-color);   
     gap: 1rem;
     /* usada para definir o espaço entre os elementos
