@@ -211,3 +211,17 @@ p {
 .btn-primary{
     border: 1px solid var(--primary-color);
 }
+#home{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.video iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
