@@ -2,24 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
 :root, :root[data-theme='dark'] {
-    --primary-color: #F0F0F0; /*Cor do texto */
+    --primary-color: #5968b3; /*Cor do texto */
     --secundary-bg-color: #d82424; /*Segunda cor */
     --primary-bg-color:#111217; /*Cor do fundo bg: BACKGROUND= Plano de fundo*/
-    --secundary-bg-color: #28292E; /*Segunda cor */
+    --secundary-bg-color: #5968b3; /*Segunda cor */
     --primary-border-color:#28292E; /* Cor para borda*/
     --secundary-border-color:#28292E;  /*Segunda cor */
 
-    --title-color:#f0f0f0; /*Cor do titulo*/
-    --text-color: #5968b3; /*Cor do texto*/
+    --title-color:#5968b3; /*Cor do titulo*/
+    --text-color: #f0f0f0; /*Cor do texto #5968b3*/
     --link-color: #0b1650; /*Cor do link */
     --inco-color: #fac000; /*Cor do icone*/    
 }
 :root [data-theme='light'] {
     --primary-color: #0B0B0F;
-    --primary-bg-color:#E9E9E9;
-    --secondary-bg-color: #C7c8c9;
-    --prymary-border-color: #C7c8c9;
-    --secundary-border-color: #9a9a9c;
+    --primary-bg-color:#ff0909;
+    --secondary-bg-color: #0f84f8;
+    --prymary-border-color: #dff708;
+    --secundary-border-color: #45ff0c;
 
     --title-color: #56575a;
     --text-color: #28292e;
@@ -71,11 +71,11 @@ i {
 }
 
 b {
-    font-weight: 400;
+    font-weight: 500;
 }
 h1 {
     font-size: 2.5rem;
-    font-weight: 200;
+    font-weight: 100;
 }
 
 h2{
@@ -83,7 +83,7 @@ h2{
     text-align: center;
     letter-spacing: 0.4rem;
 }
-h3 {
+h3{
     font-size: 1.55rem;
     text-align: left;
 }
@@ -94,6 +94,18 @@ h4{
     text-align: left;
 }
 
+h1,h2,h3 {
+    font-family: 'League Spartan', Tohama, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 200;
+}
+p,span,li {
+    font-size: 1rem;
+}
+p {
+    text-align: justify;
+}
 
 /* Conteúdo extra */
 #header {
@@ -158,4 +170,30 @@ h4{
 .menu-link:hover .menu-text { color: var(--primary-color);}
 .menu-icon, .menu-text { color: var(--text-color);} /* a:hover = pseudo-classe  */
 .menu-icon {font-size: 1.5rem;}
-
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+/*.header-nav { Menu desktop
+    
+}*/
+.menu-principal {
+    gap: 1rem;
+}
+.menu-social{
+    gap: 1rem;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 0.625rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    transition: ease-in-out .3s;
+    cursor: pointer;
+    color: var(--primary-color);
+}
