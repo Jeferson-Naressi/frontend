@@ -4,7 +4,7 @@
 :root, :root[data-theme='dark'] {
     --primary-color: #5968b3; /*Cor do texto */
     --primary-bg-color:#111217; /*Cor do fundo bg: BACKGROUND= Plano de fundo*/
-    --secundary-bg-color: #5968b3; /*Segunda cor */
+    --secundary-bg-color: #0a102c; /*Segunda cor */
     --primary-border-color:#28292E; /* Cor para borda*/
     --secundary-border-color:#28292E;  /*Segunda cor */
 
@@ -262,4 +262,7 @@ p {
 }
 .tecnologias-logo{
     height: 2.4rem;
+}
+.projetos {
+    
 }
