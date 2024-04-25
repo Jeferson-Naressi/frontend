@@ -3,7 +3,6 @@
 
 :root, :root[data-theme='dark'] {
     --primary-color: #5968b3; /*Cor do texto */
-    --secundary-bg-color: #d82424; /*Segunda cor */
     --primary-bg-color:#111217; /*Cor do fundo bg: BACKGROUND= Plano de fundo*/
     --secundary-bg-color: #5968b3; /*Segunda cor */
     --primary-border-color:#28292E; /* Cor para borda*/
@@ -153,7 +152,7 @@ p {
 }
 .menu-mobile {
     width: 100vw; /*VW = viewport width Valor 100% da tela*/
-    position: fixed; /*Posição */
+    /*position: fixed; Posição */
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--primary-border-color);
@@ -224,4 +223,43 @@ p {
 .video iframe{
     width: 100%;
     aspect-ratio: 16/9;
+}
+#home, projetos, .sobre, .contato{
+    padding: 2.5rem 1rem;
+}
+.tecnologias{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 6.25rem 1rem 2rem;
+    background: var(--secundary-bg-color);
+    margin-top: -2.5rem;
+
+}
+.tecnologias h2{
+    font-size: 2rem;
+    text-decoration: none;
+    letter-spacing: normal;
+    text-align: start;
+    color: var(--text-color);
+}
+.tecnologias-lista{
+    display: flex;
+    flex-flow: row wrap;
+    gap: .5rem;
+}
+.tecnologias-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 1px solid var(--secundary-border-color);
+    border-radius: 5rem;
+}
+.tecnologias-logo{
+    height: 2.4rem;
 }
