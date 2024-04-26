@@ -263,3 +263,34 @@ p {
 .tecnologias-logo{
     height: 2.4rem;
 }
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.projetos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.projetos-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.card-cover{
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    object-position: center;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.card-descricao{
+    
+}
