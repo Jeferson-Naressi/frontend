@@ -291,6 +291,39 @@ p {
     align-items: flex-start;
     gap: 1rem;
 }
-.card-descricao{
-    
+.card-title{
+    font-size: 2rem;
+    color: (var(--title-color));
+    font-weight: 400;
 }
+.card-descricao{
+    color: var(--title-color);
+}
+.card-lista, .sobre-lista{
+    margin-left: 1.25rem;
+}
+.card-item, .sobre-item{
+    list-style: disc;
+}
+.card-button, .card-descricao{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.card-button .btn{
+    padding: 65rem 1.25rem;
+}
+.card-button .btn span{
+    font-size: 1rem;
+}
+.card-body .tecnologias-lista{
+    gap: .75rem;
+}
+.card-body .tecnologias-item{
+    width: 4rem;
+    height: 4rem;
+}
+.card-body .tecnologias-item{
+    height: 2rem;
+}
+
