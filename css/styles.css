@@ -146,7 +146,7 @@ p {
 }
 .menu-mobile {
     width: 100vw; /*VW = viewport width Valor 100% da tela*/
-    /*position: fixed; Posição */
+    position: fixed; /* Posição */
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--primary-border-color);
@@ -412,4 +412,37 @@ p {
 }
 .accordion-items.active .bi-caret-down-fill {
     transform: rotate(180deg);
+}
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 1px solid var(--secundary-border-color);
+}
+.contato p {
+    text-align: center;
+}
+.contato .btn {
+    width: auto;
+}
+.contato .email{
+    text-transform: uppercase;
+}
+
+footer {
+    margin-top: 5rem;
+}
+footer p {
+    font-size: .875rem;
+    text-align: center;
+    padding: 1rem;
+}
+/* Responsividade */
+@media (min-width: 768px ){
+    .header{
+        
+    }
 }
