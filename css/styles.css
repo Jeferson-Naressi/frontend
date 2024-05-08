@@ -146,7 +146,7 @@ p {
 }
 .menu-mobile {
     width: 100vw; /*VW = viewport width Valor 100% da tela*/
-    position: fixed; /* Posição */
+    /*position: fixed; Posição */
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--primary-border-color);
@@ -342,7 +342,7 @@ p {
     object-fit: cover;
     object-position: center;
     border-radius: 50rem;
-    border: 1px solida var(--primary-color);
+    border: 1px solid;
 }
 .sobre-descricao {
     display: flex;
@@ -353,31 +353,32 @@ p {
 .sobre-icones {
     display: flex;
     align-items: center;
-    grid: 1.25rem;
-} 
+    gap: 1.25rem;
+}
 .sobre-icones i {
     font-size: 1.25rem;
 }
-.sobre-content2 .col1,
-.sobre-content2 .col2{
+.sobre-content2 .col1, 
+.sobre-content2 .col2 {
     display: flex;
     flex-direction: column;
     text-align: justify;
     gap: 2rem;
-}
-.sobre-content2 .col1, .row1,
-.sobre-content2 .col1, .row2 {
+}  
+
+.sobre-content2 .col1 .row1, 
+.sobre-content2 .col1 .row2 {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
 .accordion-header {
-    width: 100%; 
+    width: 100%;
     display: flex;
     padding: 0.75rem 1rem;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--prymary-border-color);
+    border: 1px solid var(--primary-border-color);
     background: transparent;
     text-align: left;
     cursor: pointer;
@@ -386,14 +387,14 @@ p {
 .accordion-header span {
     color: var(--title-color);
 }
-.accordion-header .start {
+.accordion-header.start {
     border-radius: 0.25rem 0.25rem 0rem 0rem;
 }
-.accordion-header.end,
-.accordion-header.active .accordion-body.end {
-    border-radius: 0.25rem 0.25rem 0rem 0rem;
+.accordion-header.end, 
+.accordion-item.active .accordion-body.end {
+    border-radius: 0rem 0rem 0.25rem 0.25rem;
 }
-.accordion-header.active .accordion-body.end {
+.accordion-item.active .accordion-item.end {
     border-radius: 0;
 }
 .accordion-body {
@@ -404,15 +405,16 @@ p {
     gap: .625rem;
     border: 1px solid var(--primary-border-color);
 }
-.accordion-items.active .accordion-header {
+.accordion-item.active .accordion-header {
     background: var(--secondary-bg-color);
 }
-.accordion-items.active .accordion-body{
+.accordion-item.active .accordion-body {
     display: flex;
 }
-.accordion-items.active .bi-caret-down-fill {
+.accordion-item.active .bi-caret-down-fill {
     transform: rotate(180deg);
 }
+/* Contato */
 .contato {
     display: flex;
     flex-direction: column;
@@ -420,29 +422,30 @@ p {
     align-items: center;
     gap: 1.5rem;
     border-top: 1px solid var(--primary-border-color);
-    border-bottom: 1px solid var(--secundary-border-color);
+    border-bottom: 1px solid var(--secondary-border-color);
 }
 .contato p {
     text-align: center;
 }
 .contato .btn {
-    width: auto;
+    width: auto; /**/
 }
-.contato .email{
+.contato .email {
     text-transform: uppercase;
 }
-
+/* Roda Pé */
 footer {
-    margin-top: 5rem;
+    margin-bottom: 5rem;  
 }
 footer p {
     font-size: .875rem;
     text-align: center;
     padding: 1rem;
 }
-/* Responsividade */
-@media (min-width: 768px ){
-    .header{
+
+/* Responsividade */ 
+@media (min-width: 768px) { 
+    #header {
         position: fixed;
         border-bottom: 1px solid var(--primary-border-color);
         padding: 1rem 6rem;
@@ -451,18 +454,18 @@ footer p {
     .nav-mobile {
         display: none;
     }
-    .header-nav {
+    .header-nav { 
         display: flex;
     }
     .header-nav,
     .header-toggle {
         min-width: 30%;
     }
-    h1{
-        font-size: 3rem;
+    h1 {
+        font-size: 5rem;
     }
     h2 {
-        font-size: 3rem ;
+        font-size: 3rem;
     }
     #home, .projetos, .sobre {
         padding: 8rem 6rem 4rem 6rem;
@@ -473,13 +476,103 @@ footer p {
         align-items: flex-start;
     }
     .tecnologias {
-        padding: 6.25rem 6rem 3rem 6rem;
-        margin-top: -8rem;
+        padding: 6.25rem 6rem 2rem 6rem;
+        margin-top: -6rem;
     }
-    .contato{
+    .contato {
         padding: 6rem;
     }
     .contato p {
         width: 80%;
+    }
+    footer {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .card-cover {
+        width: 55%;
+    }
+    .sobre {
+        gap: 5rem;
+    }
+    .sobre-content1, .sobre-content2 {
+        display: grid;
+        grid-template-columns: 34% 60%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+    .descricao-button {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    #home {
+        padding: 10rem 6rem 2rem;
+    }
+    .main-content .btn {
+        width: auto;
+    }
+    .tecnologias {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10rem 6rem 4rem;
+    }
+    .tecnologias h2 {
+        font-size: 3rem;
+        width: 55%;
+    }
+    .tecnologias-lista{
+        gap: 1rem;
+    }
+    .tecnologia-item {
+        width: 6rem;
+        height: 6rem;
+    }
+    .tecnologia-logo {
+        height: 3rem;
+    }
+    p, span, li {
+        font-size: 1.15rem;
+    }
+    .card-button .btn, 
+    .descricao-button .btn {
+        width: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 6.25rem;
+    }
+    h2{
+        font-size: 4.5rem;
+    }
+    h3 {
+        font-size: 3.25rem;
+    }
+    .header {
+        padding: 12rem 15rem 2rem;
+    }
+    .tecnologias, .projetos, .sobre {
+        padding: 10rem 15rem 4rem;
     }
 }
