@@ -119,7 +119,7 @@ p {
     display: flex;
     justify-content: flex-end;
 }
-#toggletheme {
+#toggleTheme {
     font-size: 1.5rem;
     color: var(--inco-color);
     cursor: pointer;
@@ -218,7 +218,7 @@ p {
     width: 100%;
     aspect-ratio: 16/9;
 }
-#home, projetos, .sobre, .contato{
+#home, .projetos, .sobre, .contato{
     padding: 2.5rem 1rem;
 }
 .tecnologias{
@@ -297,7 +297,7 @@ p {
     margin-left: 1.25rem;
 }
 .card-item, .sobre-item{
-    list-style: disc;
+    list-style: None;
 }
 .card-button, .card-descricao{
     display: flex;
@@ -491,10 +491,10 @@ footer p {
 }
 
 @media (min-width: 992px) {
-    .projeto-card {
+    .projetos-card {
         flex-direction: row;
     }
-    .projeto-card.card-reverse {
+    .projetos-card.card-reverse {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
