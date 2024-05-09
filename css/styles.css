@@ -67,11 +67,11 @@ i {
 }
 
 b {
-    font-weight: 500;
+    font-weight: 400;
 }
 h1 {
     font-size: 2.5rem;
-    font-weight: 100;
+    font-weight: 200;
 }
 h2{
     font-size: 2rem;
@@ -167,9 +167,9 @@ p {
     font-size: .75rem;
     text-transform: uppercase;
 }
-/*.header-nav { Menu desktop
-    
-}*/
+.header-nav { 
+    display: none;
+}
 .menu-principal {
     gap: 1rem;
 }
@@ -229,7 +229,7 @@ p {
     gap: 1.25rem;
     padding: 6.25rem 1rem 2rem;
     background: var(--secundary-bg-color);
-    margin-top: -2.5rem;
+    margin-top: -5.5rem;
 
 }
 .tecnologias h2{
@@ -251,7 +251,7 @@ p {
     align-items: center;
     width: 4.8rem;
     height: 4.8rem;
-    border: 1px solid var(--secundary-border-color);
+    border: 3px solid var(--secundary-border-color);
     border-radius: 5rem;
 }
 .tecnologias-logo{
@@ -287,7 +287,7 @@ p {
 }
 .card-title{
     font-size: 2rem;
-    color: (var(--title-color));
+    color: var(--title-color);
     font-weight: 400;
 }
 .card-descricao{
@@ -297,7 +297,7 @@ p {
     margin-left: 1.25rem;
 }
 .card-item, .sobre-item{
-    list-style: None;
+    list-style: disc;
 }
 .card-button, .card-descricao{
     display: flex;
@@ -311,7 +311,7 @@ p {
     font-size: 1rem;
 }
 .card-body .tecnologias-lista{
-    gap: 0.75rem;
+    gap: .75rem;
 }
 .card-body .tecnologias-item{
     width: 4rem;
@@ -338,11 +338,11 @@ p {
 }
 .sobre-logo{
     width: 100%;
-    left: 50rem;
     object-fit: cover;
     object-position: center;
+    pointer-events: none;
     border-radius: 50rem;
-    border: 1px solid;
+    border:  8px solid var(--primary-color);
 }
 .sobre-descricao {
     display: flex;
@@ -395,7 +395,7 @@ p {
     border-radius: 0rem 0rem 0.25rem 0.25rem;
 }
 .accordion-item.active .accordion-item.end {
-    border-radius: flex;
+    border-radius: 0;
 }
 .accordion-body {
     display: none;
@@ -491,10 +491,10 @@ footer p {
 }
 
 @media (min-width: 992px) {
-    .projetos-card {
+    .projeto-card {
         flex-direction: row;
     }
-    .projetos-card.card-reverse {
+    .projeto-card.card-reverse {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
