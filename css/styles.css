@@ -13,7 +13,7 @@
     --link-color: #0b1650; /*Cor do link */
     --inco-color: #fac000; /*Cor do icone*/    
 }
-:root [data-theme='light'] {
+:root[data-theme='light'] {
     --primary-color: #0B0B0F;
     --primary-bg-color:#ff0909;
     --secondary-bg-color: #0f84f8;
@@ -29,10 +29,10 @@ Root refere-se ao elemento raiz do documento html
 seletor :root define as variaveis globais
 isso oferece uma maneira flexivel de definir valores que podem ser reutiilizadas em todo o seu CSS  e facilmente atualizados de um único lugar */
 
-html [data-theme='light'] .brand-logo {
+html[data-theme='light'] .logo {
     filter:invert(1);
 }
-html [data-theme='light'] .tecnologias-logo {
+html[data-theme='light'] .tecnologias-logo {
     filter:invert(80%);
 } /* para inversão das cores do logo quando ele estiver em modo dark tendo em vista que ele é preto */
 * {
@@ -50,7 +50,7 @@ html [data-theme='light'] .tecnologias-logo {
   scrollbar-width: thin; /*Comprimento da barra */
   scrollbar-color: var(--secundary-bg-color) transparent;
 }
-body {
+body{
     background-color: var(--primary-bg-color); /*Cor do fundo da pagina*/
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
     color:var(--text-color);
@@ -146,7 +146,7 @@ p {
 }
 .menu-mobile {
     width: 100vw; /*VW = viewport width Valor 100% da tela*/
-    /*position: fixed; Posição */
+    position: fixed; /*Posição */
     bottom: 0;
     justify-content: space-between;
     border-top: 1px solid var(--primary-border-color);
@@ -395,7 +395,7 @@ p {
     border-radius: 0rem 0rem 0.25rem 0.25rem;
 }
 .accordion-item.active .accordion-item.end {
-    border-radius: 0;
+    border-radius: flex;
 }
 .accordion-body {
     display: none;
