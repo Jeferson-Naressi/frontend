@@ -164,10 +164,9 @@ p {
 .menu-icon, .menu-text { color: var(--text-color);} /* a:hover = pseudo-classe  */
 .menu-icon {font-size: 1.5rem;}
 .menu-text {
-    font-size: .75rem;
     text-transform: uppercase;
 }
-.header-nav { 
+.header-nav { /* Ocultar nosso modo mobile */
     display: none;
 }
 .menu-principal {
@@ -491,10 +490,10 @@ footer p {
 }
 
 @media (min-width: 992px) {
-    .projeto-card {
+    .projetos-card {
         flex-direction: row;
     }
-    .projeto-card.card-reverse {
+    .projetos-card.card-reverse {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
@@ -543,11 +542,11 @@ footer p {
     .tecnologias-lista{
         gap: 1rem;
     }
-    .tecnologia-item {
+    .tecnologias-item {
         width: 6rem;
         height: 6rem;
     }
-    .tecnologia-logo {
+    .tecnologias-logo {
         height: 3rem;
     }
     p, span, li {
