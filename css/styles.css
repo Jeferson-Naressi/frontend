@@ -14,11 +14,11 @@
     --inco-color: #fac000; /*Cor do icone*/    
 }
 :root[data-theme='light'] {
-    --primary-color: #0B0B0F;
-    --primary-bg-color:#ff0909;
+    --primary-color: #ffffff;
+    --primary-bg-color:#ffffff;
     --secondary-bg-color: #0f84f8;
     --prymary-border-color: #dff708;
-    --secundary-border-color: #45ff0c;
+    --secundary-border-color: #c9cec8;
 
     --title-color: #56575a;
     --text-color: #28292e;
@@ -121,7 +121,7 @@ p {
 }
 #toggleTheme {
     font-size: 1.5rem;
-    color: var(--inco-color);
+    color: var(--icon-color);
     cursor: pointer;
     transition: ease-in-out .4s; 
 }
