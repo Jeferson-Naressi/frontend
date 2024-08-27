@@ -1,32 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
-:root, :root[data-theme='dark'] {
-  --primary-color: #F0F0F0;
+/* Definir o tema dark do site */
+:root, 
+:root[data-theme='dark'] {
+    --primary-color: #F0F0F0;
+    --primary-bg-color: #111217;
+    --secondary-bg-color: #28292E;
+    --primary-border-color: #28292E;
+    --secondary-border-color: #56575A;
+    --title-color: #F0F0F0;
+    --text-color: #8f8f8f;
+    --link-color: #F0F0F0;
+    --icon-color: #C7C8C9;
 
-  --primary-bg-color: #111217;
-  --secondary-bg-color: #28292E;
-  --primary-border-color: #28292E;
-	--secondary-border-color: #56575A;
-
-  --title-color: #F0F0F0;
-  --text-color: #9A9A9C;
-  --link-color: #9A9A9C;
-  --icon-color: #C7C8C9;
 }
-/*
-definindo variáveis de cores para um tema claro e um tema escuro
-
-ROOT refere-se ao elemento raiz do documento HTML
-
-seletor :root define as variáveis globais
-
-Isso oferece uma maneira flexível de definir valores
-que podem ser reutilizados em todo o seu CSS e facilmente atualizados de um único lugar.
-*/
-
 :root[data-theme='light'] {
-  --primary-color: #0B0B0F;
+    --primary-color: #0B0B0F;
 
 	--primary-bg-color: #E9E9E9;
 	--secondary-bg-color: #C7C8C9;
@@ -34,8 +23,8 @@ que podem ser reutilizados em todo o seu CSS e facilmente atualizados de um úni
 	--secondary-border-color: #9A9A9C;
 
 	--title-color: #0B0B0F;
-	--text-color: #28292E;
-	--link-color: #28292E;
+	--text-color: #a3a2a2;
+	--link-color: #0B0B0F;
 	--icon-color: #56575A;
 }
 /*
