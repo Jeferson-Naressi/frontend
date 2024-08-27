@@ -3,273 +3,343 @@
 <!-- Alt+shift+Seta Para baixo copia -->
 <!-- Ctrl+Espaço: variedade de coisas -->
 <!-- Classe chama no css com . e Id com # -->
-
+ 
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="dark">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeferson Naressi | Portfolio </title>
-    <link rel="shortcut icon" href="img/projetos/Log.ico">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap"rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    
+    <title> Jeferson Naressi | Portfolio </title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-
 <body>
-    <header id="header"> <!-- Cabeçario -->
+    <header id="header"> <!-- cabeçalho -->
         <nav class="header-nav">
+        <!-- "header-nav" - Isso pode ser útil quando você deseja ocultar
+        a navegação de um cabeçalho, por exemplo, 
+        em certos dispositivos ou resoluções de tela. -->
             <ul class="menu menu-principal">
                 <li class="menu-item">
-                    <a href="#home" class="menu-link active">
-                        <span class="menu-text">Home</span>
+                   <a class="menu-link active" href="#home"> 
+                       <span class="menu-text"> Home </span> 
+                   </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#projetos">
+                       <span class="menu-text"> Projetos </span> 
                     </a>
                 </li>
-                <li class="projetos-item">
-                    <a href="#projetos" class="menu-link">
-                        <span class="projetos-item">Projetos</span>
+                <li class="menu-item">
+                    <a class="menu-link" href="#sobre">
+                       <span class="menu-text"> Sobre </span> 
                     </a>
                 </li>
-                <li class="sobre-item">
-                    <a href="#sobre" class="menu-link">
-                        <span class="menu-text">Sobre</span>
-                    </a>
-                </li>
-                <li class="contato-item">
-                    <a href="#contato" class="menu-link">
-                        <span class="menu-text">Contato</span>
+                <li class="menu-item">
+                    <a class="menu-link" href="#contato">
+                       <span class="menu-text"> Contato </span> 
                     </a>
                 </li>
             </ul>
         </nav>
-        <div class="header-logo"> <!--Area do logo -->
+        
+        <div class="header-logo">  <!-- area do logo -->
             <a href="#home">
-                <img src="img/logo.png" alt="" class="logo">
+                <img class="logo" src="img/logo.png" 
+                alt="">
             </a>
-        </div>
+        </div><!-- Fim area do logo -->
+
         <div class="header-toggle">
             <i id="toggleTheme" class="bi bi-sun"></i>
         </div>
-
-    </header> <!--Fim do Cabeçario -->
-<!--Menu mobile -->
-<nav class="nav-mobile">
-    <ul class="menu menu-mobile">
-        <li class="menu-item">
-            <a class="menu-link" href="#home" >
-                <i class="menu-icon bi bi-house-up"></i> <!--configuração propria e depois a icone escolhido -->
-                <span class="menu-text"> Home </span>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a class="menu-link" href="#projetos" >
-                <i class="menu-icon bi bi-window-stack"></i> <!--configuração propria e depois a icone escolhido -->
-                <span class="menu-text"> Projetos </span>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a class="menu-link" href="#sobre" >
-                <i class="menu-icon bi bi-file-person"></i> <!--configuração propria e depois a icone escolhido -->
-                <span class="menu-text"> Sobre </span>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a class="menu-link" href="#contato" >
-                <i class="menu-icon bi bi-envelope-at"></i> <!--configuração propria e depois a icone escolhido -->
-                <span class="menu-text"> Contato </span>
-            </a>
-        </li>
-    </ul>
-</nav>
-<main id="home">
-    <div class="main-content">
-        <h1> <b>Soluções Criativas & </b> Dev Front End.</h1>
-        <p>Jeferson Naressi, São Paulo - SP, Desenvolvedor Jr e Suporte a Campo</p>
-        <ul class="menu manu-social">
-            <li>
-                <a class="menu-link" href="https://github.com/Jeferson-Oliveiraa" target="_blank">
-                    <i class="menu-icon bi bi-github"></i>
+    </header>
+    <!-- fim cabeçalho -->
+    <!-- menu mobile -->
+    <nav class="nav-mobile">
+        <ul class="menu menu-mobile">
+            
+            <li class="menu-item">
+                <a class="menu-link active" href="#home">
+                    <i class="menu-icon bi bi-house-door"> </i>
+                    <span class="menu-text"> Home </span>
                 </a>
             </li>
-            <li>
-                <a class="menu-link" href="https://www.linkedin.com/in/jeferson-oliveiraa" target="_blank">
-                    <i class="menu-icon bi bi-linkedin"></i>
+
+            <li class="menu-item">
+                <a class="menu-link" href="#projetos">
+                    <i class="menu-icon bi bi-window-stack"> </i>
+                    <span class="menu-text"> Projetos </span>
+                </a>
+            </li>
+
+            <li class="menu-item"> 
+                <a class="menu-link" href="#sobre">
+                    <i class="menu-icon bi bi-person"> </i>
+                    <span class="menu-text"> Sobre </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a class="menu-link" href="#contato">
+                    <i class="menu-icon bi bi-envelope"> </i>
+                    <span class="menu-text"> Contato </span>
                 </a>
             </li>
         </ul>
-        <a href="#Projetos">
-            <button class="btn btn-primary">
-                <span> Ver Produtos </span>
-                <i class="bi bi-arrow-down-right"></i>
-            </button>
-        </a>
-    </div><!-- Fim main-content -->
-    <div class="video">
-        <iframe width="653" height="280" src="https://www.youtube.com/embed/CoCLu7mZe5s" title="Como fazer pagamentos com a Carteira do Google?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-</main>
-<section class="tecnologias">
-    <h2> Conhecimento nas principais tecnologias do mercado. </h2>
-    <ul class="tecnologias-lista">
-        <li class="tecnologias-item">
-            <img class="tecnologias-logo" src="img/tecnologias/HTML5.svg" alt="">
-        </li>
-        <li class="tecnologias-item">
-            <img class="tecnologias-logo" src="img/tecnologias/Css.svg" alt="">
-        </li>
-        <li class="tecnologias-item">
-            <img class="tecnologias-logo" src="img/tecnologias/Javascript.svg" alt="">
-        </li>
-    </ul>
-</section>
-<section id="projetos" class="projetos">
-    <h2>Projetos</h2>
-    <div class="projetos-container">
-        <div class="projetos-card"><!-- Inicio Projetos-card 01-->  
-            <img class="card-cover" src="img/projetos/josisbox.jpg" alt="">
-            <div class="card-bory">
-                <h3 class="card-title"> Josi's Box Ecommerce</h3>
-                <p class="card-descricao">Ecommerce de livros</p>
-                <ul class="card-lista">
-                    <li class="card-item">Listagem de Favoritos;</li>
-                    <li class="card-item">Carrinho de Comprar;</li>
-                    <li class="card-item">Filtragem por Preço e Categoria;</li>
-                </ul>
-                <ul class="tecnologias-lista">
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/HTML5.svg" alt="">
-                    </li>
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/Css.svg" alt="">
-                    </li>
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/Javascript.svg" alt="">
-                    </li>
-                </ul>
-                <div class="card-button">
-                    <button class="btn btn-primary">
-                        <a href="https://jeferson-oliveiraa.github.io/Loja_Virtual/" target="_blank">
-                        <span>Previa</span>
-                        <i class="bi bi-arrow-down-right"></i>
-                        </a>
-                    </button>
-                    <button class="btn">
-                        <a href="https://github.com/Jeferson-Oliveiraa/Loja_Virtual" target="_blank">
-                            <span>Repositório</span>
-                        </a>
-                    </button>
-                </div>
-            </div>
-        </div><!-- Fechamento Projetos-card 01-->       
-        <div class="projetos-card card-reverse"><!-- Inicio Projetos-card 02-->  
-            <img class="card-cover" src="img/projetos/portfolio.PNG" alt="">
-            <div class="card-bory">
-                <h3 class="card-title"> Jeferson Naressi</h3>
-                <p class="card-descricao">Desenvolvedor Junior</p>
-                <ul class="card-lista">
-                    <li class="card-item">Listagem de Favoritos;</li>
-                    <li class="card-item">Carrinho de Comprar;</li>
-                    <li class="card-item">Filtragem por Preço e Categoria;</li>
-                </ul>
-                <ul class="tecnologias-lista">
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/HTML5.svg" alt="">
-                    </li>
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/Css.svg" alt="">
-                    </li>
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/Javascript.svg" alt="">
-                    </li>
-                </ul>
-                <div class="card-button">
-                    <button class="btn btn-primary">
-                        <a href="# " target="_blank">
-                        <span>Previa</span>
-                        <i class="bi bi-arrow-down-right"></i>
-                        </a>
-                    </button>
-                    <button class="btn">
-                        <a href="#" target="_blank">
-                            <span>Repositório</span>
-                        </a>
-                    </button>
-                </div>
-            </div>
-        </div><!-- Fechamento Projetos-card 02-->  
-        <div class="projetos-card"><!-- Inicio Projetos-card 03-->  
-            <img class="card-cover" src="img/projetos/games-store.jpg" alt="">
-            <div class="card-bory">
-                <h3 class="card-title"> Games Store</h3>
-                <p class="card-descricao">Loja online de Games</p>
-                <ul class="card-lista">
-                    <li class="card-item">Listagem de Favoritos;</li>
-                    <li class="card-item">Carrinho de Comprar;</li>
-                    <li class="card-item">Filtragem por Preço e Categoria;</li>
-                </ul>
-                <ul class="tecnologias-lista">
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/HTML5.svg" alt="">
-                    </li>
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/Css.svg" alt="">
-                    </li>
-                    <li class="tecnologias-item">
-                        <img class="tecnologias-logo" src="img/tecnologias/Javascript.svg" alt="">
-                    </li>
-                </ul>
-                <div class="card-button">
-                    <button class="btn btn-primary">
-                        <a href="#" target="_blank">
-                        <span>Previa</span>
-                        <i class="bi bi-arrow-down-right"></i>
-                        </a>
-                    </button>
-                    <button class="btn">
-                        <a href="#" target="_blank">
-                            <span>Repositório</span>
-                        </a>
-                    </button>
-                </div>
-            </div>
-        </div><!-- Fechamento Projetos-card 03--> 
-<!--    <a href="#" target="_blank">
-            <button class="btn btn-primary">
-                <span>Ver todos os projetos</span>
-                <i class="bi bi-arrow-up-right"></i>
-            </button>
-        </a> -->
-    </div> 
-</section><!-- Fim projetos -->
-<section id="sobre" class="sobre" >
-    <div class="sobre-content1">
-        <img class="sobre-logo" src="img/projetos/Avatar.jpg" alt="">
-        <div class="sobre-descricao">
-            <h2>Sobre Mim</h2>
-            <p>Jeferson Naressi, Desenvolvedor Junior, apaixonado por tecnologia.</p>
-            <div class="Sobre-icones">
-                <i class="bi bi-translate"></i>
-                <span>Inglês: Básico</span>
-            </div>
-            <div class="descricao-button">
-                <a href="https://www.linkedin.com/in/jeferson-oliveiraa" target="_blank">
-                    <button class="btn btn-primary">
-                        <span>conecta-se Comigo</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div><!-- Fim conteúdo 1 -->
-    <div class="sobre-content2">
-        <div class="col1">
-            <div class="row1">
-                <h3>Formação</h3>
-<script src="js/script.js"></script>
-</body>
-</html>
+    </nav>    
+    <!-- Fim menu mobile -->
 
+    <main id="home">
+        <div class="main-content">
+            <h1> <b> Soluções Criativas & </b> Desenvolvimento Front-End </h1>
+            <p>Jeferson Naressi, São Paulo - SP, Desenvolvedor Jr e Suporte a Campo</p>
+
+            <ul class="menu menu-social">
+                
+                <li>
+                    <a class="menu-link" href="https://github.com/Jeferson-Oliveiraa" target="_blank">
+                        <i class="menu-icon bi bi-github"></i>    
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="https://www.linkedin.com/in/jeferson-oliveiraa" target="_blank">
+                        <i class="menu-icon bi bi-linkedin"></i>    
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="https://www.instagram.com" target="_blank">
+                        <i class="menu-icon bi bi-instagram"></i>  
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="https://www.facebook.com" target="_blank">
+                        <i class="menu-icon bi bi-facebook"> </i>    
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#projetos">
+                <button class="btn btn-primary">
+                    <span> Ver Projetos </span>
+                    <i class="bi bi-arrow-down-right"> </i>
+                </button>
+            </a>
+        </div>  <!-- Fim main-content -->
+
+        <div class="video">
+            <iframe width="" height="" src="https://www.youtube.com/embed/CoCLu7mZe5s" title="Eu sendo coração mole e o Google me entende" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <section class="tecnologias">
+        <h2>Conhecimento nas principais tecnologias do mercado.</h2>
+        
+        <ul class="tecnologias-lista">
+
+            <li class="tecnologia-item">
+                <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg">       
+            </li>
+
+            <li class="tecnologia-item">
+                <img class="tecnologia-logo" src="img/tecnologias/Css.svg" alt="">
+            </li>
+
+            <li class="tecnologia-item">
+                <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt="">       
+            </li>
+        </ul>
+    </section> <!-- fim tecnologias --> 
+
+    <section id="projetos" class="projetos">
+        <h2>Projetos</h2>
+        <div class="projeto-container">
+
+            <div class="projeto-card">
+                <img class="card-cover" src="img/projetos/josisbox.jpg" alt="">
+                    
+                    <div class="card-body">
+
+                        <h3 class="card-title"> Josi's Box Ecommerce </h3>
+                        <p class="card-descricao"> Ecommerce de Livros </p>
+                        <ul class="card-lista">
+                            <li class="card-item">
+                                Listagem de Favoritos;
+                            </li>
+                            <li class="card-item">
+                                Carrinho de Comprar;
+                            </li>
+                            <li class="card-item">
+                                Filtragem por Preço e Categoria;
+                            </li>
+                        </ul>
+
+                        <ul class="tecnologias-lista"> 
+                        
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Css.svg" alt="">
+                            </li>
+                        </ul>
+
+                        <div class="card-button">
+                            <button class="btn btn-primary">
+                                <a href="https://jeferson-oliveiraa.github.io/Loja_Virtual/"
+                                target="_blank">  
+                                    <span> Prévia </span>
+                                    <i class="bi bi-arrow-up-right"> </i>
+                                </a>
+                            </button>
+                            <button class="btn">
+                                <a href="https://github.com/Jeferson-Oliveiraa/Loja_Virtual" target="_blank"> 
+                                    <span> Repositório </span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>  <!-- card body -->
+            </div>  <!-- Fim projeto-card -->
+
+            <div class="projeto-card card-reverse">
+                <img class="card-cover" src="img/projetos/portfolio.PNG" alt="">
+                    
+                    <div class="card-body">
+
+                        <h3 class="card-title"> Jeferson Naressi </h3>
+                        <p class="card-descricao"> Desenvolvedor Junior</p>
+                        <ul class="card-lista">
+                            <li class="card-item">
+                                Postagens relacionadas em Destaque;
+                            </li>
+                            <li class="card-item">
+                                Seção dos Projetos;
+                            </li>
+                            <li class="card-item">
+                                Biografia do Autor;
+                            </li>
+                        </ul>
+
+                        <ul class="tecnologias-lista"> 
+                            
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Css.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt="">
+                            </li>
+                        </ul>
+
+                        <div class="card-button">
+                            <button class="btn btn-primary">
+                                <a href="#"
+                                target="_blank">
+                                    <span> Prévia </span>
+                                    <i class="bi bi-arrow-up-right"> </i>
+                                </a>
+                            </button>
+                            <button class="btn">
+                                <a href="#" target="_blank"> 
+                                    <span> Repositório </span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>  <!-- card body -->
+            </div>  <!-- Fim projeto-card card-reverse -->
+
+            <div class="projeto-card">
+                <img class="card-cover" src="img/projetos/games-store.jpg alt="">
+                    
+                    <div class="card-body">
+
+                        <h3 class="card-title"> Games Store </h3>
+                        <p class="card-descricao"> Loja online de games </p>
+                        <ul class="card-lista">
+                            <li class="card-item">
+                                Favoritos;
+                            </li>
+                            <li class="card-item">
+                                Carrinho de Comprar
+                            </li>
+                            <li class="card-item">
+                                Filtragem por Preço e Categoria;
+                            </li>
+                        </ul>
+
+                        <ul class="tecnologias-lista"> 
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Css.svg" alt="">
+                            </li>
+                        </ul>
+
+                        <div class="card-button">
+                            <button class="btn btn-primary">
+                                <a href="#"
+                                target="_blank">  
+                                    <span> Prévia </span>
+                                    <i class="bi bi-arrow-up-right"> </i>
+                                </a>
+                            </button>
+                            <button class="btn">
+                                <a href="#" target="_blank"> 
+                                    <span> Repositório </span>
+                                </a>
+                            </button>
+                        </div> <!-- card-button -->
+                    </div>  <!-- card body -->
+            </div>  <!-- Fim projeto-card -->
+
+        </div> <!-- Fim projeto-container -->
+    </section> <!-- fim projetos -->
+
+    <section id="sobre" class="sobre" >
+        <div class="sobre-content1">
+            <img class="sobre-logo" src="img/projetos/Avatar.jpg" alt="">
+            <div class="sobre-descricao">
+                <h2>Sobre Mim</h2>
+                <p>Jeferson Naressi, Desenvolvedor Junior, apaixonado por tecnologia.</p>
+                <div class="Sobre-icones">
+                    <i class="bi bi-translate"></i>
+                    <span>Inglês: Básico</span>
+                </div>
+                <div class="descricao-button">
+                    <a href="https://www.linkedin.com/in/jeferson-oliveiraa" target="_blank">
+                        <button class="btn btn-primary">
+                            <span>conecta-se Comigo</span>
+                            <i class="bi bi-arrow-up-right"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div><!-- Fim conteúdo 1 -->
+        <div class="sobre-content2">
+            <div class="col1">
+                <div class="row1">
+                    <h3>Formação</h3>
+    <script src="js/script.js"></script>
+    </body>
+    </html>
+    
