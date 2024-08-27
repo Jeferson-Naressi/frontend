@@ -1,594 +1,510 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gustavo Feriani | Portfolio </title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header id="header"> <!-- cabeçalho -->
+        <nav class="header-nav">
+        <!-- "header-nav" - Isso pode ser útil quando você deseja ocultar
+        a navegação de um cabeçalho, por exemplo, 
+        em certos dispositivos ou resoluções de tela. -->
+            <ul class="menu menu-principal">
+                <li class="menu-item">
+                   <a class="menu-link active" href="#home"> 
+                       <span class="menu-text"> Home </span> 
+                   </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#projetos">
+                       <span class="menu-text"> Projetos </span> 
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#sobre">
+                       <span class="menu-text"> Sobre </span> 
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#contato">
+                       <span class="menu-text"> Contato </span> 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="header-logo">  <!-- area do logo -->
+            <a href="#home">
+                <img class="logo" src="img/logo.png" 
+                alt="">
+            </a>
+        </div><!-- Fim area do logo -->
 
-/* Definir o tema dark do site */
-:root, 
-:root[data-theme='dark'] {
-    --primary-color: #F0F0F0;
-    --primary-bg-color: #111217;
-    --secondary-bg-color: #28292E;
-    --primary-border-color: #28292E;
-    --secondary-border-color: #56575A;
-    --title-color: #F0F0F0;
-    --text-color: #8f8f8f;
-    --link-color: #F0F0F0;
-    --icon-color: #C7C8C9;
+        <div class="header-toggle">
+            <i id="toggleTheme" class="bi bi-sun"></i>
+        </div>
+    </header>
+    <!-- fim cabeçalho -->
+    <!-- menu mobile -->
+    <nav class="nav-mobile">
+        <ul class="menu menu-mobile">
+            
+            <li class="menu-item">
+                <a class="menu-link active" href="#home">
+                    <i class="menu-icon bi bi-house-door"> </i>
+                    <span class="menu-text"> Home </span>
+                </a>
+            </li>
 
-}
-:root[data-theme='light'] {
-    --primary-color: #0B0B0F;
+            <li class="menu-item">
+                <a class="menu-link" href="#projetos">
+                    <i class="menu-icon bi bi-window-stack"> </i>
+                    <span class="menu-text"> Projetos </span>
+                </a>
+            </li>
 
-	--primary-bg-color: #E9E9E9;
-	--secondary-bg-color: #C7C8C9;
-	--primary-border-color: #C7C8C9;
-	--secondary-border-color: #9A9A9C;
+            <li class="menu-item"> 
+                <a class="menu-link" href="#sobre">
+                    <i class="menu-icon bi bi-person"> </i>
+                    <span class="menu-text"> Sobre </span>
+                </a>
+            </li>
 
-	--title-color: #0B0B0F;
-	--text-color: #a3a2a2;
-	--link-color: #0B0B0F;
-	--icon-color: #56575A;
-}
-/*
-definindo variáveis de cores para um tema claro e um tema escuro
+            <li class="menu-item">
+                <a class="menu-link" href="#contato">
+                    <i class="menu-icon bi bi-envelope"> </i>
+                    <span class="menu-text"> Contato </span>
+                </a>
+            </li>
+        </ul>
+    </nav>    
+    <!-- Fim menu mobile -->
 
-ROOT refere-se ao elemento raiz do documento HTML
+    <main id="home">
+        <div class="main-content">
+            <h1> <b> Soluções Criativas & </b> Desenvolvimento Front-End </h1>
+            <p> Gustavo Feriani, São Paulo - SP, Desenvolvedor e Instrutor Front-End.  
+            </p>
 
-seletor :root define as variáveis globais
+            <ul class="menu menu-social">
+                
+                <li>
+                    <a class="menu-link" href="https://github.com/guuhferiani" target="_blank">
+                        <i class="menu-icon bi bi-github"></i>    
+                    </a>
+                </li>
 
-Isso oferece uma maneira flexível de definir valores
-que podem ser reutilizados em todo o seu CSS e facilmente atualizados de um único lugar.
-*/
-html[data-theme='light'] .logo {
-    filter:invert(1);
-}
-html[data-theme='light'] .tecnologia-logo {
-    filter: invert(80%);
-}
-/*  (*) reset do CSS */
-* {
-   margin: 0px;  /* margem */
-   padding: 0px;  /* preenchimento // espaçamento */ 
-   box-sizing: border-box;
-    /* 
-    A propriedade box-sizing em CSS é usada para alterar o modelo de caixa de um elemento.
-    O valor border-box é usado para garantir que a largura e a altura de um elemento
-    incluam as bordas e o preenchimento, em vez de apenas o conteúdo.
-    Quando você define box-sizing: border-box;, está dizendo ao navegador
-    para calcular a largura e a altura total de um elemento,
-    incluindo a largura das bordas e o preenchimento, e não apenas o conteúdo.
-    */
-   vertical-align: baseline;
-   list-style: none;
-   scrollbar-width: thin;
-   scrollbar-color: var(--secondary-bg-color) transparent;
-}
-body {
-    background: var(--primary-bg-color);
-    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-color);
-}
-a {
-    text-decoration: none;
-    color: var(--text-color);
-}
-a:hover {
-    color: var(--primary-color);
-}
-i {
-    color: var(--icon-color);
-}
-b {
-    font-weight: 400;
-}
-h1 {
-    font-size: 2.5rem;
-    font-weight: 200;
-}
-h2 {
-    font-size: 2rem;
-    text-align: center;
-    letter-spacing: 0.4rem;
-}
-h3 {
-    font-size: 1.55rem;
-    text-align: left;
-}
-h4 {
-    color: var(--primary-color);
-    font-weight: 400;
-    font-size: 1.15rem;
-    text-align: left;
-}
-h1, h2, h3{
-    font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
-    text-transform: uppercase;
-    color: var(--title-color);
-    font-weight: 200;
-}
-p, span, li {
-    font-size: 1rem;
-}
-p {
-    text-align: justify;
-}
-#header {
-    display: flex;
-    flex-flow: row wrap;
-    /* Coloca o conteúdo em linha e permite a quebra de linha. */
-    justify-content: space-between;
-    /* Os itens dentro do container flexível serão distribuídos de maneira uniforme ao longo do eixo principal, com espaços iguais entre eles.  */
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    z-index: 2;
-}
+                <li>
+                    <a class="menu-link" href="" target="_blank">
+                        <i class="menu-icon bi bi-linkedin"></i>    
+                    </a>
+                </li>
 
-.header-logo .logo {
-    width: 3.25rem;
-    height: 3.25rem;
-}
-.header-toggle {
-    display: flex;
-    justify-content: flex-end;
-}
-#toggleTheme {
-    font-size: 1.5rem;
-    color: var(--icon-color);
-    cursor: pointer;
-    transition: ease-in-out .4s;
-}
-.menu{
-    display: flex;
-    /*  Torna o elemento um flex container automaticamente
-    transformando todos os seus filhos diretos em flex itens */
-    align-items: center;
-    background: var(--primary-bg-color);
-    gap: 1rem;
-}
-.menu-item{
-    width: 100%;
-}
-.menu-link{
-    display: flex; 
-    /*  Torna o elemento um flex container automaticamente
-    transformando todos os seus filhos diretos em flex itens */
-    align-items: center;
-    gap: .5rem;  
-    /* usada para definir o espaço entre os elementos
-    criar espaçamento uniforme entre os elementos
-    */
-}
-.menu-mobile {
-    width: 100vw;  /* V W = viewport width*/
-    position: fixed;
-    bottom: 0;
-    justify-content: space-between;
-    border-top: 1px solid var(--primary-border-color);   
-}
-.menu-mobile .menu-link {
-    flex-direction: column;
-    /* definir a direção principal dos itens em uma coluna vertical */
-    justify-content: center;
-    padding: 0.5rem 1rem;
-}
-.menu-link.active .menu-icon, 
-.menu-link.active .menu-text,
-.menu-link:hover .menu-icon, 
-.menu-link:hover .menu-text {
-  color: var(--link-color);
-  
-}
-.menu-icon, .menu-text{
-    color: var(--text-color);
-    font-weight: 600;
-}
-.menu-icon{
-    font-size: 1.5rem;
-}
-.menu-text {
-    font-size: .75rem;
-    text-transform: uppercase;
-}
-.header-nav { 
-    display: none; 
-}
-.menu-principal {
-    gap: 1rem;
-}
-.menu-social{
-    gap: 1rem;
-}
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    width: 100%;
-    background: transparent;
-    border-radius: 3rem;
-    border: none;
-    padding: 0.5rem 1.5rem;
-    transition: ease-in-out .3s;
-    cursor: pointer;
-    color: var(--primary-color);
-}
-.btn:hover{
-    transform: scale(1.05);
-    transition: ease-in-out .3s;
-}
-.btn span, .btn i {
-    font-size: 1.25rem;
-    text-transform: uppercase;
-}
-.btn-primary span {
-    color: var(--primary-color);
-}
-.btn-primary {
-    border: 1px solid var(--primary-color);
-}
-#home {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; 
-}
-.main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-.video iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-}
-#home, .projetos, .sobre, .contato{
-    padding: 2.5rem 1rem;
-}
-.tecnologias {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.25rem;
-    padding: 6.25rem 1rem 2rem;
-    background: var(--secondary-bg-color);
-    margin-top: -5.5rem;
-}
-.tecnologias h2 {
-    font-size: 2rem;
-    text-transform: none;
-    letter-spacing: normal;
-    text-align: start;
-}
-.tecnologias-lista {  
-    display: flex;
-    flex-flow: row wrap;
-    gap: .5rem;
-}
-.tecnologia-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 4.8rem;
-    height: 4.8rem;
-    border: 3px solid var(--secondary-border-color);
-    border-radius: 5rem;
-}
-.tecnologia-logo{
-    height: 2.4rem;
-}
-.projetos {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;    
-}
-.projeto-container {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-.projeto-card {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-.card-cover {
-    width: 100%;
-    border-radius: 0.5rem;
-    object-fit: cover;
-    object-position: center;
-}
-.card-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 1rem;
-}
-.card-title {
-    font-size: 2rem;
-    color: var(--title-color);
-    font-weight: 400;
-}
-.card-descricao {
-    color: var(--title-color);
-}
-.card-lista .sobre-lista{
-    margin-left: 1.25rem;
-}
-.card-item, .sobre-item{
-    list-style: disc;
-}
-.card-button, .card-descricao{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-.card-button .btn {
-    padding: .65rem 1.25rem;
-}
-.card-button .btn span {
-    font-size: 1rem;
-}
-.card-body .tecnologias-lista {
-    gap: .75rem;
-}
-.card-body .tecnologia-item{
-    width: 4rem;
-    height: 4rem;
-}
-.card-body .tecnologia-logo{
-    height: 2rem;
-}
-.projetos .btn {
-    width: auto;
-    margin: auto;
-}
-/* Sobre */
-.sobre {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-.sobre-content1, .sobre-content2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 2rem;
-}
-.sobre-logo {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
-    border-radius: 50rem;
-    border:  8px solid var(--primary-color);
-}
-.sobre-descricao {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1.5rem;
-}
-.sobre-icones {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-}
-.sobre-icones i {
-    font-size: 1.25rem;
-}
-.sobre-content2 .col1, 
-.sobre-content2 .col2 {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    gap: 2rem;
-}
-.sobre-content2 .col1 .row1, 
-.sobre-content2 .col1 .row2 {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-.accordion-header {
-    width: 100%;
-    display: flex;
-    padding: 0.75rem 1rem;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid var(--primary-border-color);
-    background: transparent;
-    text-align: left;
-    cursor: pointer;
-    transition: ease-in-out .3s;
-}
-.accordion-header span {
-    color: var(--title-color);
-}
-.accordion-header.start {
-    border-radius: 0.25rem 0.25rem 0rem 0rem;
-}
-.accordion-header.end, 
-.accordion-item.active .accordion-body.end {
-    border-radius: 0rem 0rem 0.25rem 0.25rem;
-}
-.accordion-item.active .accordion-item.end {
-    border-radius: 0;
-}
-.accordion-body {
-    display: none;
-    padding: 1.25rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .625rem;
-    border: 1px solid var(--primary-border-color);
-}
-.accordion-item.active .accordion-header {
-    background: var(--secondary-bg-color);
-}
-.accordion-item.active .accordion-body {
-    display: flex;
-}
-.accordion-item.active .bi-caret-down-fill {
-    transform: rotate(180deg);
-}
-/* Contato */
-.contato {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    border-top: 1px solid var(--primary-border-color);
-    border-bottom: 1px solid var(--secondary-border-color);
-}
-.contato p {
-    text-align: center;
-}
-.contato .btn {
-    width: auto; /**/
-}
-.contato .email {
-    text-transform: uppercase;
-}
-/* Roda Pé */
-footer {
-    margin-bottom: 5rem;  
-}
-footer p {
-    font-size: .875rem;
-    text-align: center;
-    padding: 1rem;
-}
-/* Responsividade */
-@media (min-width: 768px) {
-    #header {
-        position: fixed;
-        border-bottom: 1px solid var(--primary-border-color);
-        padding: 1rem 6rem;
-        background: var(--primary-bg-color);
-    }
-    .nav-mobile {
-        display: none;
-    }
-    .header-nav { 
-        display: flex;
-    }
-    .header-nav,
-    .header-toggle {
-        min-width: 30%;
-    }
-    h1 {
-        font-size: 5rem;
-    }
-    h2 {
-        font-size: 3rem;
-    }
-    #home, .projetos, .sobre {
-        padding: 8rem 6rem 4rem 6rem;
-    }
-    .main-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .tecnologias {
-        padding: 6.25rem 6rem 2rem 6rem;
-        margin-top: -6rem;
-    }
-    .contato {
-        padding: 6rem;
-    }
-    .contato p {
-        width: 80%;
-    }
-    footer {
-        margin: 0;
-    }
-}
-@media (min-width: 992px) {
-    .projeto-card {
-        flex-direction: row;
-    }
-    .projeto-card.card-reverse {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-    .card-cover {
-        width: 55%;
-    }
-    .sobre {
-        gap: 5rem;
-    }
-    .sobre-content1, .sobre-content2 {
-        display: grid;
-        grid-template-columns: 34% 60%;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 4rem;
-    }
-    .sobre-descricao h2 {
-        text-align: left;
-    }
-    .descricao-button {
-        justify-content: flex-start;
-    }
-}
-@media (min-width: 1200px) {
-    h2 {
-        font-size: 4rem;
-    }
-    h3 {
-        font-size: 2.5rem;
-    }
-    #home {
-        padding: 10rem 6rem 2rem;
-    }
-    .main-content .btn {
-        width: auto;
-    }
-    .tecnologias {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10rem 6rem 4rem;
-    }
-    .tecnologias h2 {
-        font-size: 3rem;
-        width: 55%;
-    }
-    .tecnologias-lista{
-        gap: 1rem;
-    }
-    .tecnologia-item {
-        width: 6rem;
-        height: 6rem;
-    }
-    .tecnologia-logo {
-        height: 3rem;
-    }
-    p, span, li {
-        font-size: 1.15rem;
-    }
-    .card-button .btn, 
-    .descricao-button .btn {
-        width: auto;
-    }
-}
-@media (min-width: 1400px) {
-    h1 {
-        font-size: 6.25rem;
-    }
-    h2{
-        font-size: 4.5rem;
-    }
-    h3 {
-        font-size: 3.25rem;
-    }
-    .header {
-        padding: 12rem 15rem 2rem;
-    }
-    .tecnologias, .projetos, .sobre {
-        padding: 10rem 15rem 4rem;
-    }
-}
+                <li>
+                    <a class="menu-link" href="https://www.instagram.com/gustavo.feriani/" target="_blank">
+                        <i class="menu-icon bi bi-instagram"></i>  
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="https://www.facebook.com/guhferiani" target="_blank">
+                        <i class="menu-icon bi bi-facebook"> </i>    
+                    </a>
+                </li>
+            </ul>
+
+            <a href="#projetos">
+                <button class="btn btn-primary">
+                    <span> Ver Projetos </span>
+                    <i class="bi bi-arrow-down-right"> </i>
+                </button>
+            </a>
+        </div>  <!-- Fim main-content -->
+
+        <div class="video">
+            <iframe width="" height="" src="https://www.youtube.com/embed/EAjWeHn01Z8" title="Eu sendo coração mole e o Google me entende" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <section class="tecnologias">
+        <h2>Conhecimento nas principais tecnologias do mercado.</h2>
+        
+        <ul class="tecnologias-lista">
+
+            <li class="tecnologia-item">
+                <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg">       
+            </li>
+
+            <li class="tecnologia-item">
+                <img class="tecnologia-logo" src="img/tecnologias/Css.svg" alt="">
+            </li>
+
+            <li class="tecnologia-item">
+                <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt="">       
+            </li>
+
+            <li class="tecnologia-item">
+                <img class="tecnologia-logo" src="img/tecnologias/Bootstrap.svg" alt="">
+            </li>
+        </ul>
+    </section> <!-- fim tecnologias --> 
+
+    <section id="projetos" class="projetos">
+        <h2>Projetos</h2>
+        <div class="projeto-container">
+
+            <div class="projeto-card">
+                <img class="card-cover" src="img/projetos/josisbox.jpg" alt="">
+                    
+                    <div class="card-body">
+
+                        <h3 class="card-title"> Josi's Box Ecommerce </h3>
+                        <p class="card-descricao"> Ecommerce de Livros </p>
+                        <ul class="card-lista">
+                            <li class="card-item">
+                                Listagem de Favoritos;
+                            </li>
+                            <li class="card-item">
+                                Carrinho de Comprar;
+                            </li>
+                            <li class="card-item">
+                                Filtragem por Preço e Categoria;
+                            </li>
+                        </ul>
+
+                        <ul class="tecnologias-lista"> 
+                            
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Angular.svg" alt="">
+                            </li>
+                        
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Css.svg" alt="">
+                            </li>
+                        </ul>
+
+                        <div class="card-button">
+                            <button class="btn btn-primary">
+                                <a href="https://www.amazon.com.br/Livros/b/?ie=UTF8&node=6740748011&ref_=nav_cs_books"
+                                target="_blank">  
+                                    <span> Prévia </span>
+                                    <i class="bi bi-arrow-up-right"> </i>
+                                </a>
+                            </button>
+                            <button class="btn">
+                                <a href="https://github.com/guuhferiani/teste-josis" target="_blank"> 
+                                    <span> Repositório </span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>  <!-- card body -->
+            </div>  <!-- Fim projeto-card -->
+
+            <div class="projeto-card card-reverse">
+                <img class="card-cover" src="img/projetos/portfolio.PNG" alt="">
+                    
+                    <div class="card-body">
+
+                        <h3 class="card-title"> Portfolio Pessoal </h3>
+                        <p class="card-descricao"> A história por trás do meu Portfolio. </p>
+                        <ul class="card-lista">
+                            <li class="card-item">
+                                Postagens relacionadas em Destaque;
+                            </li>
+                            <li class="card-item">
+                                Seção dos Projetos;
+                            </li>
+                            <li class="card-item">
+                                Biografia do Autor;
+                            </li>
+                        </ul>
+
+                        <ul class="tecnologias-lista"> 
+                            
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Css.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Bootstrap.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt="">
+                            </li>
+                        </ul>
+
+                        <div class="card-button">
+                            <button class="btn btn-primary">
+                                <a href="https://guuhferiani.github.io/frontend/"
+                                target="_blank">
+                                    <span> Prévia </span>
+                                    <i class="bi bi-arrow-up-right"> </i>
+                                </a>
+                            </button>
+                            <button class="btn">
+                                <a href="https://github.com/guuhferiani/frontend" target="_blank"> 
+                                    <span> Repositório </span>
+                                </a>
+                            </button>
+                        </div>
+                    </div>  <!-- card body -->
+            </div>  <!-- Fim projeto-card card-reverse -->
+
+            <div class="projeto-card">
+                <img class="card-cover" src="img/projetos/josisbox.jpg" alt="">
+                    
+                    <div class="card-body">
+
+                        <h3 class="card-title"> Games Store </h3>
+                        <p class="card-descricao"> Loja online de games </p>
+                        <ul class="card-lista">
+                            <li class="card-item">
+                                Favoritos;
+                            </li>
+                            <li class="card-item">
+                                Carrinho de Comprar
+                            </li>
+                            <li class="card-item">
+                                Filtragem por Preço e Categoria;
+                            </li>
+                        </ul>
+
+                        <ul class="tecnologias-lista"> 
+                            
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Angular.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Javascript.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/HTML5.svg" alt="">
+                            </li>
+
+                            <li class="tecnologia-item">
+                                <img class="tecnologia-logo" src="img/tecnologias/Css.svg" alt="">
+                            </li>
+                        </ul>
+
+                        <div class="card-button">
+                            <button class="btn btn-primary">
+                                <a href="https://www.amazon.com.br/Livros/b/?ie=UTF8&node=6740748011&ref_=nav_cs_books"
+                                target="_blank">  
+                                    <span> Prévia </span>
+                                    <i class="bi bi-arrow-up-right"> </i>
+                                </a>
+                            </button>
+                            <button class="btn">
+                                <a href="https://github.com/guuhferiani/teste-josis" target="_blank"> 
+                                    <span> Repositório </span>
+                                </a>
+                            </button>
+                        </div> <!-- card-button -->
+                    </div>  <!-- card body -->
+            </div>  <!-- Fim projeto-card -->
+
+        </div> <!-- Fim projeto-container -->
+    </section> <!-- fim projetos -->
+
+    <section id="sobre" class="sobre">
+
+        <div class="sobre-content1">
+            
+            <img class="sobre-logo" src="img/avatar.jpg" alt="">
+
+            <div class="sobre-descricao">
+
+                <h2> Sobre Mim </h2>
+                <p>
+                  Gustavo Feriani. Entusiasta por tecnologia, Games e PC, meu primeiro "Hello World" foi na pré-adolescência quanto tive contato com HTML em Tabelas e aqueles websites esquisitos feitos em Flash 😅. Atualmente curso especiliazação em IA e Machine Learning e atuo como instrutor no Senai SP.
+                </p>
+                
+                <div class="sobre-icones"> 
+                    <i class="bi bi-translate"> </i>
+                    <span> Inglês: Intermediário </span>
+                </div>
+                
+                <div class="descricao-button">
+                    <a href="https://www.linkedin.com/in/gustavo-feriani/" target="_blank">
+                        
+                        <button class="btn btn-primary">
+                            <span> Conecte-se Comigo </span>
+                            <i class="bi bi-arrow-up-right"> </i>
+                        </button>
+                    </a>
+                </div>
+
+            </div> <!-- sobre-descricao -->
+        </div> <!-- fim conteudo 1 -->
+
+        <div class="sobre-content2">
+
+            <div class="col1">
+                <div class="row1">
+                    <h3> Formação </h3>
+                    <h4> IA e Machine Learning </h4>
+                    <span> Fev 2024 - Atualmente </span>
+
+                    <div class="sobre-icones">
+                        <i class="bi bi-bank"> </i>
+                        <span>Cruzeiro do Sul </span>
+                    </div>
+
+                    <div class="sobre-icones">
+                        <i class="bi bi-mortarboard"> </i>
+                        <span> Pós Graduação </span> <br> <br>
+                    </div>
+                    <!-- nova formação  -->
+                    <h4> Sistemas para Internet </h4>
+                    <span> 2020 - 2022 </span>
+
+                    <div class="sobre-icones">
+                        <i class="bi bi-bank"> </i>
+                        <span> FAM </span>
+                    </div>
+
+                    <div class="sobre-icones">
+                        <i class="bi bi-award-fill"> </i>
+                        <span> Tecnólogo </span> <br> <br>
+                    </div>
+                    
+                </div> <!-- row1 -->
+
+                <div class="row2">
+                    <h3> Experiências </h3>
+                    
+                    <h4> Instrutor </h4>
+                    <span> Senai. Agosto 2012 - Atualmente. </span>
+                    <span> Instrutor de treinamentos e cursos, etc </span>
+
+                    <ul class="sobre-lista">
+                        <li class="sobre-item"> Aulas presenciais </li>
+                        <li class="sobre-item"> Aulas EAD </li>
+                    </ul>
+
+                </div>
+                
+            </div>  <!-- col 1 --> 
+
+            <div class="col2">
+                
+                <h3> Cursos </h3>
+                <div class="accordion">
+
+                    <div class="accordion-item active">
+
+                        <button class="accordion-header start">
+                            <span> Desenvolvimento Front-End com Angular </span>
+                            <i class="bi bi-caret-down-fill"> </i>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p> Digital Innovation One. 68H. </p>
+                            <p> Desenvolvimento Front End com Angular e desenvolver habilidades práticas para construir aplicações web modernas e responsivas, enquanto treina recursos de Inteligência Artificial para se tornar um desenvolvedor completo.  </p>
+                        </div>              
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <button class="accordion-header">
+                            <span> Google Cloud Engineer </span>
+                            <i class="bi bi-caret-down-fill"> </i>
+                        </button>
+
+                        <div class="accordion-body">
+                            <p> Senai. Fev 2024. 40H. </p>
+                            <p> Com a certificação Associate Cloud Engineer, é possível implantar aplicativos, monitorar operações e gerenciar soluções corporativas. Também é possível usar o Console do Google Cloud e a interface de linha de comando na realização de tarefas comuns baseadas na plataforma para a manutenção de uma ou mais soluções implantadas que usam os serviços gerenciados pelo Google ou autogerenciados no Google Cloud.
+                            </p>
+                        </div>              
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <button class="accordion-header end">
+                            <span> Google Cloud Computing Foundations
+                            </span>
+                            <i class="bi bi-caret-down-fill"> </i>
+                        </button>
+
+                        <div class="accordion-body end">
+                            <p> Senai. Fev 2024. 40H. </p>
+                            <p> Este curso fornece uma visão geral da computação em nuvem, maneiras de usar o Google Cloud e diferentes opções de computação.
+                            </p>
+                        </div>              
+                    </div>
+                
+                </div> <!-- Fim accordion -->
+            </div>  <!-- col 2 -->
+        </div> <!-- sobre-content2 -->
+
+    </section>
+
+    <section id="contato" class="contato">
+        
+        <h2> Contato </h2>
+        <p> Estou disponível para orientações e novas conexões. 
+            Contate-me via e-mail e conecte-se comigo através das minhas redes sociais.
+        </p>
+
+        <ul class="menu menu-social">
+            
+            <li> 
+                <a class="menu-link" href="https://github.com/guuhferiani" target="_blank">
+                    <i class="menu-icon bi bi-github"> </i>
+                    <span> GitHub </span>
+                </a>
+            </li>
+
+            <li> 
+                <a class="menu-link" href="" target="_blank">
+                    <i class="menu-icon bi bi-linkedin"> </i>
+                    <span> Linkedin </span>
+                </a>
+            </li>
+
+            <li> 
+                <a class="menu-link" 
+                href="https://www.instagram.com/gustavo.feriani/" target="_blank">
+                    <i class="menu-icon bi bi-instagram"> </i>
+                    <span> Instagram </span>
+                </a>
+            </li>
+
+        </ul>
+
+        <a href="mailto:gustavo.feriani@sp.senai.br">
+            <button class="btn btn-primary">
+                <span class="email"> gustavo.feriani@sp.senai.br </span>
+            </button>
+        </a>
+    </section> <!-- fim contato -->
+    
+    <footer>
+        <p>
+            &copy; 2024. Portfolio desenvolvido para fins educativos com base nas aulas no <a href="https://sp.senai.br/unidade/leopoldina/" target="_blank">  Senai Leopolidna - SP </a>.
+            Desenvolvido por <a href="https://github.com/guuhferiani" target="_blank"> Gustavo Feriani </a>
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
