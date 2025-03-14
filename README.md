@@ -48,13 +48,13 @@ Mais projetos serão adicionados em breve! 🚀
 
 🎓 **Bootcamp Avanade - .NET Developer** - Desenvolvimento de APIs, testes unitários e integração com bancos de dados.
 
-Em progresso: Certificações **Azure Fundamentals (AZ-900)** e **Data Fundamentals (DP-900)**
+Em progresso: Certificações **Programação em C# ** e **Azure Fundamentals (AZ-900)**
 
 ---
 
 ## 📫 Contato
 
-📩 **E-mail:** jeferson.naressi@gmail.com *(exemplo, ajuste se necessário)*  
+📩 **E-mail:** jeferson143@hotmail.com
 🔗 **LinkedIn:** [br.linkedin.com/in/jeferson-naressi](https://br.linkedin.com/in/jeferson-naressi)  
 💻 **Portfólio:** [jeferson-naressi.github.io/frontend](https://jeferson-naressi.github.io/frontend/)  
 
